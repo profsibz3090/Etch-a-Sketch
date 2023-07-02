@@ -8,14 +8,14 @@ document.querySelector('body').appendChild(button);
 
 document.querySelector('body').setAttribute('style', 'padding:0; margin:0; box-sizing: border-box; width:100vw')
 const flexContainer = document.createElement('div');
-flexContainer.setAttribute('style', 'display:flex;');
+flexContainer.setAttribute('style', 'display:flex; max-width: 100vw');
    
 function createColumn() {
     const columnChildren = document.createElement('div');
-    columnChildren.setAttribute('style', 'diplay:flex; flex-direction: column');
+    columnChildren.setAttribute('style', 'diplay:flex; flex-direction: column; flex: auto;');
     for (let i = 0; i < 16; i++) {
         const div = document.createElement('div');
-        div.setAttribute('style', 'width:76px; height:80px; background-color:red; flex: auto; margin: 4px;');
+        div.setAttribute('style', 'width:76px; height:80px; border: 1px dashed black; flex: auto;');
         // div.addEventListener('mouseenter', (event) => {
         //     div.style.cssText = 'background-color:green';
         // });
